@@ -11,7 +11,7 @@ export default async function BugReportPage({
 
   return (
     <div className="text-red-500">
-      Bug report {bug_report_id} has been intercepted !
+      Bug report {bug_report_id} has been intercepted !!!
     </div>
   );
 }
