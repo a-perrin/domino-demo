@@ -1,10 +1,17 @@
-export default async function BugReportPage(props: {
-  params: Promise<{ bug_report_id: string }>;
+export default async function BugReportPage({
+  params,
+}: {
+  params: Promise<{
+    bug_report_id: string;
+    committee_type_id: string;
+    committee_id: string;
+  }>;
 }) {
-  const params = await props.params;
+  const { bug_report_id } = await params;
+
   return (
     <div className="text-red-500">
-      Bug report {params.bug_report_id} has been intercepted !
+      Bug report {bug_report_id} has been intercepted !
     </div>
   );
 }
